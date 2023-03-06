@@ -5,9 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "./../CartContext";
 
 function HeaderShop(){
-    const value1 = useContext(CartContext);
-    
-    let valCart= value1.cart;
+    // const value1 = useContext(CartContext);
+    console.log("abnc");
+    // let valCart= value1.cart;
 
     const navigate= useNavigate();
    
@@ -116,7 +116,7 @@ function HeaderShop(){
                                 {renderAccount()}
                                 <li><Link to ><i className="fa fa-star" /> Wishlist</Link></li>
                                 <li><Link to="checkout.html"><i className="fa fa-crosshairs" /> Checkout</Link></li>
-                                <li className="liindexcart"><Link className="indexsosp" to="cart.html" >Cart ({valCart})</Link></li>
+                                <li className="liindexcart"><Link className="indexsosp" to="cart.html" >Cart ({0})</Link></li>
                                 {renderLogin()}
 
                             </ul>

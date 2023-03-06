@@ -3,7 +3,7 @@ function LeftAccount(){
         <div className="col-sm-3">
                     <div className="left-sidebar">
                         <h2>Account</h2>
-                        <div className="panel-group category-products" id="accordian">{/*category-productsr*/}
+                        <div className="panel-group category-products" id="accordian">
                             <div className="panel panel-default">
                                 <div className="panel-heading">
                                     <h4 className="panel-title">
@@ -34,7 +34,7 @@ function LeftAccount(){
                                         </h4>
                                     </div>
                             </div>
-                        </div>{/*/category-products*/}
+                        </div>
                     </div>
         </div>
     )

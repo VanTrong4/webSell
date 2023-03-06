@@ -50,7 +50,7 @@ function Product_home(){
                       <div className="product-image-wrapper">
                         <div className="single-products">
                           <div id={value.id} className="productinfo text-center">
-                            <img src={"http://localhost/laravel/laravel/public/upload/user/product/"+ value.id_user +'/'+ JSON.parse(value.image)[0] } alt="" />
+                            <img src={"http://localhost/laravel/laravel/public/upload/user/product/"+ value.id_user +'/'+ JSON.parse(value.image)[0]} alt="" />
                             <h2>{value.price}</h2>
                             <p>{value.name}</p>
                             <a href="#" className="btn btn-default add-to-cart idProduct"><i className="fa fa-shopping-cart" />Add to cart</a>

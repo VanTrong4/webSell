@@ -1,6 +1,6 @@
 function MenuLeft(){
     return(
-            <div className="col-sm-3">
+            <div className="col-sm-3 bg-white">
                 <div className="left-sidebar">
                         <h2>Category</h2>
                             <div className="panel-group category-products" id="accordian">

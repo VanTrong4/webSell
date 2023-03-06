@@ -10,16 +10,19 @@ import MenuLeft from './shoppe/MenuLeft';
 import { useState } from 'react';
 
 function App(props) {
-  
+  console.log(props)
   let sogiohang=0;
   let getLocal= localStorage.getItem('qty');
-  let obj= JSON.parse(getLocal);
+  if(getLocal){
+    let obj= JSON.parse(getLocal);
   Object.keys(obj).map((item)=>{
     if(obj[item]){
     sogiohang= sogiohang + obj[item];/*  */
     }
   })
+  }
   const [cart, setCart] = useState(sogiohang);
+  
   //setCart(sogiohang)
   function HangContext(data){
     let sogiohangs=0;
@@ -42,7 +45,7 @@ function App(props) {
         <HeaderShop/>
           <section>
               <div className="container">
-                  <div className="row">
+                  <div className="row bg-white">
                       {/* <MenuLeft/> */}
                       {props.children}
                   </div>

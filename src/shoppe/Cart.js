@@ -7,11 +7,14 @@ function Cart(){
     const [data, setData]  =  useState([]);
     const [tong, setTong] = useState(0);
     let getLocal= localStorage.getItem('qty');
+    console.log(getLocal);
     let obj= JSON.parse(getLocal);
     
     useEffect(()=>{
+      console.log(obj);
       axios.post("http://localhost/laravel/laravel/public/api/product/cart", obj)
     .then((res)=>{
+      console.log(res);
         setData(res.data.data)
         let tongtien = 0;
         res.data.data.map((item)=>{
@@ -24,8 +27,8 @@ function Cart(){
     let sum =0;
     let sogiohang=0;
     let tongTotal= 0;
-//tạo func ->getLocal -> tính qty -> dùng context đưa qty vô headerShop (gọi hàm này ở cuối 3 hàm đấy)
-    const getCart= useContext(CartContext)
+
+    const getCart= useContext(CartContext)// context
 
     function handleCong(e){
       e.preventDefault();
@@ -81,7 +84,6 @@ function Cart(){
        setTong(tongTotal)
        //setTong(tongTotal);
       getCart.HangContext();
-      
     }
     function handleDelete(e){
       e.preventDefault();
